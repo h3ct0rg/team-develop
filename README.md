@@ -1,5 +1,7 @@
 # Team Dev — Equipo de desarrollo con agentes de IA
 
+🌐 **Español** | [English](README.en.md)
+
 Un equipo de desarrollo definido en Markdown puro:
 - **Agnóstico del lenguaje**: se adapta al stack de cada proyecto (Python, Go, Java, .NET, Node, etc.).
 - **Agnóstico de la herramienta**: funciona con Claude Code, Cursor, GitHub Copilot, Codex o cualquier IA con acceso a archivos.
