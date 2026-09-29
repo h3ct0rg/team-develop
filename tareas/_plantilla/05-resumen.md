@@ -1,32 +1,18 @@
-# Resumen de tarea: <título>
+# Resumen de tarea
 
-- **Estado final**: COMPLETADA | ESCALADA AL USUARIO
-- **Complejidad**: S | M | L | XL
-- **Equipo**: <n> dev, <n> review, <n> QA, <n> UX (detalle en `00-equipo.md`)
-- **Iteraciones de QA/UX**: <M>
+- Estado final: COMPLETADA | ESCALADA
+- Resultado:
 
-## Iteraciones por carril
-| Carril | Dev | Iteraciones de dev | Rondas de review |
-|---|---|---|---|
-| C1 | dev-1 | | |
+## Cambios y verificación
+- Rutas modificadas:
+- Gate: build / lint / tests →
+- Criterios validados:
 
-## Qué se hizo
-- ...
+## Economía de coordinación
+- Equipo usado:
+- Ampliaciones y motivo:
+- Handoffs / palabras estimadas:
+- Verificaciones reutilizadas:
 
-## Archivos modificados
-- ruta — motivo
-
-## Verificación
-- Build: OK / FALLA
-- Tests: OK / FALLA
-- Lint: OK / FALLA
-- Validación UX: OK / FALLA / n/a
-
-## Cambios de dotación
-- (ninguno) | ...
-
-## Supuestos tomados
-- ...
-
-## Observaciones menores pendientes
-- ...
+## Pendientes o supuestos
+-
