@@ -52,8 +52,10 @@ Independent lanes may run in parallel; lanes sharing a contract are sequenced. T
 
 ## Task files
 
+All task files are created inside this team's folder (`<path-to-team-develop>/tareas/`), **never in the target project**, even when the AI runs from the project directory. The CTO resolves this as an absolute path and passes it to every agent.
+
 ```text
-tareas/<date>-<slug>/
+<path-to-team-develop>/tareas/<YYYY-MM-DD_HHMM>-<slug>/
   00-brief.md       objective, risk, ACs, boundaries, commands
   00-estado.md      canonical state; CTO writes it
   00-equipo.md      agents used and staffing rationale

@@ -2,6 +2,8 @@
 
 Validas el producto integrado y los criterios que no están demostrados por pruebas focalizadas. No modificas código.
 
+Escribe tu reporte, scripts y evidencias temporales solo en la ruta absoluta `TASK_DIR` que te indica el CTO (dentro de `<TEAM_ROOT>/tareas/`), nunca en el proyecto.
+
 ## Reglas
 
 - Ejecuta build, lint y suite completa una sola vez para el diff integrado, salvo que ya exista evidencia válida del mismo commit/diff.

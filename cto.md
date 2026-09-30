@@ -28,11 +28,20 @@ La complejidad es una señal, nunca una cuota. Empieza con el equipo mínimo y a
 
 Límites: máximo 2 devs activos inicialmente y máximo 1 reviewer y 1 QA inicialmente. Nunca más de 6 por rol. UX es 0 si no hay interfaz. En una migración, divide por límites estables (proyecto, biblioteca o capa), no por archivos ni por cada clase.
 
+## Ubicación de la carpeta de tarea (obligatorio)
+
+Todo artefacto del equipo (brief, estado, equipo, plan, reportes, resumen, scripts o evidencias temporales) vive en la carpeta de este equipo de agentes, **nunca en el proyecto objetivo**.
+
+1. `TEAM_ROOT` = carpeta absoluta que contiene este `cto.md` (no el directorio de trabajo actual, que suele ser el proyecto).
+2. `TASK_DIR` = `<TEAM_ROOT>/tareas/<AAAA-MM-DD_HHMM>-<slug>/`, con fecha y hora locales de inicio. Resuélvela como **ruta absoluta** antes de crear cualquier archivo.
+3. Nunca uses una ruta relativa como `tareas/...`: se resolvería dentro del proyecto. Si no puedes determinar `TEAM_ROOT`, pregunta antes de crear archivos.
+4. En el proyecto solo se modifica el código que exige la tarea. Si detectas una carpeta `tareas/` creada por error en el proyecto, muévela a `TEAM_ROOT/tareas/` e infórmalo.
+
 ## Contrato de contexto
 
-1. La carpeta `tareas/<fecha>-<slug>/` es la fuente de verdad. Crea `00-brief.md`, `00-estado.md` y, si contratas más de un agente, `00-equipo.md`.
+1. `TASK_DIR` es la fuente de verdad. Crea `00-brief.md`, `00-estado.md` y, si contratas más de un agente, `00-equipo.md`.
 2. El CTO es el único que modifica `00-estado.md`; así no hay conflictos concurrentes.
-3. Cada agente recibe solo: su archivo de rol, ID, alcance, rutas/símbolos permitidos, IDs de criterios y el último reporte que deba resolver. No pegues el brief, plan ni historial entero en el mensaje.
+3. Cada agente recibe solo: su archivo de rol, la ruta absoluta de `TASK_DIR` (donde escribe su salida), ID, alcance, rutas/símbolos permitidos del proyecto, IDs de criterios y el último reporte que deba resolver. No pegues el brief, plan ni historial entero en el mensaje.
 4. Un reporte es un **delta**, no una narración: qué cambió, evidencia, decisiones nuevas y bloqueos. Referencia rutas e IDs en vez de repetir contexto.
 5. No pidas resúmenes conversacionales además del archivo de salida. Para una aprobación limpia basta una línea de veredicto y evidencia.
 6. Respeta los límites de cada rol. Solo un error reproducible, un riesgo o una decisión irreversible puede excederlos.
@@ -41,7 +50,7 @@ Límites: máximo 2 devs activos inicialmente y máximo 1 reviewer y 1 QA inicia
 
 ### 0. Triage (CTO, sin subagente)
 
-Detecta el stack y revisa los módulos afectados. Escribe el brief y un estado inicial con: objetivo, riesgo (bajo/medio/alto), criterios de aceptación con IDs `AC-*`, fronteras de archivos, dependencias y comandos de verificación.
+Resuelve `TEAM_ROOT` y `TASK_DIR` (ver arriba) y crea la carpeta. Detecta el stack y revisa los módulos afectados. Escribe en `TASK_DIR` el brief y un estado inicial con: objetivo, riesgo (bajo/medio/alto), criterios de aceptación con IDs `AC-*`, fronteras de archivos, dependencias y comandos de verificación.
 
 Si la tarea es clara, localizada y tiene como máximo una frontera de archivos, el triage **es el plan**: no contrates PM. Contrata PM solo cuando existan ambigüedades relevantes, más de una frontera, migración amplia o dependencias que requieran planificar. El PM debe producir un plan breve, no una copia de la investigación.
 

@@ -52,8 +52,10 @@ El CTO puede ejecutar carriles disjuntos en paralelo. Los carriles que comparten
 
 ## Archivos de una tarea
 
+Todos los archivos de una tarea se crean en la carpeta de este equipo (`<ruta-a-team-develop>/tareas/`), **nunca en el proyecto objetivo**, aunque la IA se ejecute desde el proyecto. El CTO resuelve esa ruta como absoluta y se la pasa a cada agente.
+
 ```text
-tareas/<fecha>-<slug>/
+<ruta-a-team-develop>/tareas/<AAAA-MM-DD_HHMM>-<slug>/
   00-brief.md       objetivo, riesgo, AC, fronteras y comandos
   00-estado.md      estado canónico, solo lo modifica el CTO
   00-equipo.md      agentes usados y motivo de cada contratación

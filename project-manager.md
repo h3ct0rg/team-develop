@@ -8,7 +8,7 @@ Convertir una tarea ambigua, amplia o con dependencias en el menor número de ca
 
 ## Entrada y límites
 
-Lee `00-brief.md`, el estado y solo los módulos necesarios. No copies la investigación. No propongas un carril si no tiene archivos disjuntos o una dependencia explícita.
+Lee `00-brief.md`, el estado y solo los módulos necesarios. Escribe el plan solo en la ruta absoluta `TASK_DIR` que te indica el CTO (dentro de `<TEAM_ROOT>/tareas/`), nunca en el proyecto. No copies la investigación. No propongas un carril si no tiene archivos disjuntos o una dependencia explícita.
 
 ## Salida: `01-plan.md` (máximo 350 palabras)
 

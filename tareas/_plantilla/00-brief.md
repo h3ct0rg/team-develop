@@ -1,7 +1,8 @@
 # Brief de tarea
 
-- Fecha / slug:
-- Proyecto:
+- Fecha-hora / slug:
+- Carpeta de tarea (TASK_DIR, absoluta): <TEAM_ROOT>/tareas/<AAAA-MM-DD_HHMM>-<slug>/
+- Proyecto (absoluta):
 - Objetivo (máximo 2 frases):
 - Riesgo inicial: bajo | medio | alto — motivo
 
